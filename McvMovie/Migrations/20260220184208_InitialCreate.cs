@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace McvMovie.Migrations
+namespace MvcMovie.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

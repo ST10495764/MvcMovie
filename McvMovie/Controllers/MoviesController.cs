@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using McvMovie.Data;
+using MvcMovie.Data;
 using MvcMovie.Models;
 
-namespace McvMovie.Controllers
+namespace MvcMovie.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly McvMovieContext _context;
+        private readonly MvcMovieContext _context;
 
-        public MoviesController(McvMovieContext context)
+        public MoviesController(MvcMovieContext context)
         {
             _context = context;
         }

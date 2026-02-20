@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using McvMovie.Data;
 namespace McvMovie
 {
     public class Program
@@ -5,6 +8,8 @@ namespace McvMovie
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<McvMovieContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("McvMovieContext") ?? throw new InvalidOperationException("Connection string 'McvMovieContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
